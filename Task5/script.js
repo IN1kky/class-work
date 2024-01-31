@@ -1,20 +1,39 @@
-// 3. Напишите функцию, которая принимает два числа в качестве аргументов и возвращает их максимальное значение;
 
-function maxi(a,b)
+
+function getRND (min,max)
 {
-    if (a > b)
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random()*(max-min + 1) + min)
+}
+// Получить рандомные числа min и max включительно
+
+
+// 5. Напишите программу, которая принимает массив целых чисел и проверяет, есть ли в нем хотя бы одно отрицательное число. 
+//    Если да, то программа должна вывести "Да", если нет - "Нет";
+
+let mass = [];
+y = 0;
+for (x = 0; x < 25; x++)
+{
+    mass[x] = getRND(-100,100); // Для проверки - заменяем на (0,100)
+    
+    if (mass[x] < 0)
+    {        
+        //console.log("|\t" + mass[x] + "\t\t minus")
+        y++;
+    } else
     {
-        return a;
+        //console.log("|\t" + mass[x] + "\t\t plus")
     }
-    else if (a < b)
+}
+    if (y > 0)
     {
-        return b;
-    } 
+        console.log("Да")
+    }
     else
     {
-        console.log("Числа равны")
-    }   
-}
-let x = prompt("Введите первое число");
-let y = prompt("Введите второе число");
-console.log(maxi(x,y))
+        console.log("Нет")
+    }
+    
+console.log(mass)
