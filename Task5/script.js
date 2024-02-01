@@ -9,41 +9,25 @@ function getRND (min,max)
 // Получить рандомные числа min и max включительно
 
 
-// 6. Напишите программу, которая принимает массив целых чисел и проверяет, есть ли в нем хотя бы одно число, которое делится на 3 без остатка. 
-//    Если да, то программа должна вывести "Да", если нет - "Нет".
+// 4. Напишите функцию, которая принимает массив чисел в качестве аргумента и возвращает сумму всех его элементов.
 
 let mass = [];
 let searchmass = [];
 y = 0;
 for (x = 0; x < 25; x++)
 {
-    mass[x] = getRND(-100,100); 
-    
-    if (mass[x]%3 == 0)
-    {        
-        //console.log("|\t" + mass[x] + "\t\t minus")
-        searchmass[y] = mass[x];
-        y++;
-    } else
-    {
-        //console.log("|\t" + mass[x] + "\t\t plus")
-    }
+    mass[x] = getRND(-100,100);    
 }
-    if (y > 0)
-    {
-        console.log("Да")
-    }
-    else
-    {
-        console.log("Нет")
-    }
-    console.log("Массив найденных чисел, делящихся на 3 без остатка:")
-    console.log("==============")
-for (z = 0; z < searchmass.length; z++)
+console.log("Исходный массив\n" + mass +"\n\n Процесс суммирования:")
+function plusmass (massive)
 {
-    console.log("|\t" + searchmass[z] + "\t\t|")
+    let result = 0;
+    for (y = 0; y < massive.length; y++)
+    {
+        result += massive[y]   
+        console.log("|\t" + result)     
+    }
+    return result;
 }
-    console.log("==============")
-
-console.log("Начальный массив:")
-console.log(mass)
+console.log("Итог суммирования: " + plusmass(mass));
+    

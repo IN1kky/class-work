@@ -1,0 +1,14 @@
+body {background-color: khaki;}
+h1 {color:black; margin-bottom: auto; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: left;}
+
+
+.container 
+{
+float: left;
+width: 30%;
+}
+img { width: 30%;border: 5px solid black; align-content: center; }
+.text 
+{
+font-family: Verdana, Geneva, Tahoma, sans-serif;font-size: large; 
+}
