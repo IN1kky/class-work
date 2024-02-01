@@ -9,7 +9,7 @@ function getRND (min,max)
 // Получить рандомные числа min и max включительно
 
 
-// 4. Напишите функцию, которая принимает массив чисел в качестве аргумента и возвращает сумму всех его элементов.
+// 1. Напишите функцию, которая принимает массив чисел в качестве аргумента и возвращает новый массив, содержащий только числа, кратные 3, 5 и 7.
 
 let mass = [];
 let searchmass = [];
@@ -18,16 +18,21 @@ for (x = 0; x < 25; x++)
 {
     mass[x] = getRND(-100,100);    
 }
-console.log("Исходный массив\n" + mass +"\n\n Процесс суммирования:")
-function plusmass (massive)
+console.log("Исходный массив:\n" + mass );
+function mass357 (massive)
 {
-    let result = 0;
+    let result = [];
+    let z = 0;
     for (y = 0; y < massive.length; y++)
     {
-        result += massive[y]   
-        console.log("|\t" + result)     
+        if (mass[y]%3 == 0 || mass[y]%5 == 0 || mass[y]%7 == 0 )
+        {
+            result[z] = massive[y];            
+            z++
+            
+        }    
     }
     return result;
 }
-console.log("Итог суммирования: " + plusmass(mass));
+console.log("Новый массив:\n" + mass357(mass));
     
