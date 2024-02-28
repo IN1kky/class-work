@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>electrocalc</title>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <h1> Electro calc </h1>
+    <div id="maindiv">
+        <label for="" >Ноутбуки: </label>
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-laptop" placeholder="Количество" style="margin-right: 10px;">
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-laptop2" placeholder="Цена за шт." style="margin-bottom: 10px;">
+        <br>
+        <label for="">Телефоны: </label>
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-phone" placeholder="Количество" style="margin-right: 10px;">
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-phone2" placeholder="Цена за шт." style="margin-bottom: 10px;">
+        <br>
+        <label for="">Планшеты: </label>
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-bphone" placeholder="Количество" style="margin-right: 10px;">
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-bphone2" placeholder="Цена за шт." style="margin-bottom: 10px;">
+        <br>
+        <label for="">Smart-TV: </label>
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-TV" placeholder="Количество" style="margin-right: 10px;">
+        <input type="number" min = "0" oninput="this.value = Math.abs(this.value)" id = "input-TV2" placeholder="Цена за шт." style="margin-bottom: 10px;">
+        <br>
+        <button onclick="Calc();">Рассчитать</button>
+    </div>
+    <div id="result"></div>
+</body>
+</html>

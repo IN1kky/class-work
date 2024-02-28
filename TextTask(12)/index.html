@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="app.js"></script>
+</head>
+
+<body>
+    <!-- Начало -->
+    <div class = "wrapper" id="wrapper">
+        <h1>Анкета участника</h1>
+        <div class = "wrapper-content">
+            <div class = "wrapper-form">
+                <div class="wrapper-form-group">
+                    <label for="" class ="wrapper-form-label">Введите фамилию</label>
+                    <input type="text" class="wrapper-form-input" onchange="reqInput();" id = "input-lastname" placeholder="Иванов">   
+                </div> 
+                <div class="wrapper-form-group">
+                    <label for="" class ="wrapper-form-label">Введите имя</label>
+                    <input type="text" class="wrapper-form-input" onchange="reqInput();" id = "input-firstname" placeholder="Иван">   
+                </div>   
+                <div class="wrapper-form-group">
+                    <label for="" class ="wrapper-form-label">Вы совершеннолетний?</label>
+                    <label for="" class ="wrapper-form-label">
+                        <input type="checkbox" id="input-check-positive" class="wrapper-form-check">
+                        Да
+                    </label>
+                    <label for="" class="wrapper-form-label">
+                        <input type="checkbox" id="input-check-negative" class="wrapper-form-check">
+                        Нет
+                    </label>               
+                </div>
+                <button disabled class="wrapper-form-btn" id="next-btn" onclick="nextForm();">Продолжить</button>
+            </div>
+        </div>
+        <!-- Начало несовершеннолетних -->
+        <div class="wrapper-content-negative" style="display: none;">
+            <h2>Анкета для несовершеннолетних</h2>
+            <div class="wrapper-form"> 
+                <div class="wrapper-form-group">
+                    <label for="" class="wrapper-form-label">Укажите ФИО законного представителя</label>
+                    <input type="text" class="wrapper-form-input" id="input-name" placeholder="Павлова Маргарита Андреевна">
+                </div>
+                <div class="wrapper-form-group">
+                    <label for="" class="wrapper-form-label">Укажите в какой школе вы учиились</label>
+                    <input type="text" class="wrapper-form-input" id="input-school" placeholder="Школа №3">
+                </div>
+                <div class="wrapper-form-group">
+                    <label for="" class="wrapper-form-label">Ваше направление</label>
+                    <select id="select-nap">
+                        <option value="Программирование">Программирование</option>
+                        <option value="Дизайн">Дизайн</option>
+                        <option value="Системное администрирование">Системное администрирование</option>
+                        <option value="Администратор баз данных">Администратор баз данных</option>
+                    </select>
+                </div>
+            </div>
+            <button class="wrapper-save-btn" id="save-btn-1" onclick="saveForm();">Сохранить</button>
+        </div>
+        <!-- Конец несовершеннолетних (Вот это каламбур) -->
+        <!-- Начало совершеннолетних -->
+        <div class="wrapper-content-positive" style="display: none;">
+            <h2>Анкета для совершеннолетних</h2>
+            <div class="wrapper-form">
+                <div class="wrapper-form-group">
+                    <label for="" class="wrapper-form-label">Укажите название кафедры</label>
+                    <input type="text" class="wrapper-form-input" id="input-kaf" placeholder="Информационные технологии">
+                </div>
+                <div class="wrapper-form-group">
+                    <label for="" class="wrapper-form-label">Укажите в какой школе вы учиились</label>
+                    <input type="text" class="wrapper-form-input" id="input-school" placeholder="Школа №3">
+                </div>
+                <div class="wrapper-form-group">
+                    <label for="" class="wrapper-form-label">Ваше направление</label>
+                    <select id="select-nap">
+                        <option value="Программирование">Программирование</option>
+                        <option value="Дизайн">Дизайн</option>
+                        <option value="Системное администрирование">Системное администрирование</option>
+                        <option value="Администратор баз данных">Администратор баз данных</option>
+                    </select>
+                </div>
+            </div>
+            <button class="wrapper-save-btn" id="save-btn-1" onclick="saveForm();">Сохранить</button>
+        </div>
+    <!-- Конец совершеннолетних (Опять каламбуры) -->
+    </div>
+</body>
+
+</html>
